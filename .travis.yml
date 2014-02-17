@@ -4,16 +4,7 @@ env:
 - TOXENV=py27
 - TOXENV=precise
 - TOXENV=trunk
-- TOXENV=pypy
-matrix:
-  allow_failures:
-  - env: TOXENV=pypy
+
 install:
   - pip install -M tox
 script: tox
-notifications:
-  irc:
-    use_notice: true
-    skip_join: true
-    channels:
-    - "irc.freenode.org#scrapy"
